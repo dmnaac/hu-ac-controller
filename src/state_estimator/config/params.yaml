@@ -1,0 +1,6 @@
+state_estimator:
+  ros__parameters:
+    odom_topic: "/odom/current_pose" # 里程计话题，可切换为其他里程计来源
+    output_topic: "/target_state" # 输出话题
+    sync_slop: 0.05 # ApproximateTime 同步容差 (s)
+    sync_queue_size: 10 # 同步器缓冲队列长度

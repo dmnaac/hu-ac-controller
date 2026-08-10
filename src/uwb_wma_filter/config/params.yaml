@@ -1,0 +1,9 @@
+uwb_wma_filter:
+  ros__parameters:
+    window_size: 0.3 # 滑动时间窗口 (秒)
+    min_samples: 5 # 最少样本数，不满足不发布
+    noise_floor_pos: 0.01 # 位置噪声下限 (m)，避免 σ→0 时权重爆炸
+    noise_floor_vel: 0.01 # 速度噪声下限 (m/s)
+    decay_rate: 5.0 # 时间衰减系数 α (1/s)，exp(-α * Δt)
+    input_topic: "/fm_driver/result"
+    output_topic: "/filtered_result"
