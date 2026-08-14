@@ -1,6 +1,8 @@
 state_estimator:
   ros__parameters:
     odom_topic: "/odom/current_pose" # 里程计话题，可切换为其他里程计来源
-    output_topic: "/target_state" # 输出话题
+    uwb_frame_id: "fm_anchor_link"
+    base_frame_id: "BASE_LINK"
     sync_slop: 0.05 # ApproximateTime 同步容差 (s)
     sync_queue_size: 10 # 同步器缓冲队列长度
+    tf_timeout: 0.1 # TF 超时时间 (s)
